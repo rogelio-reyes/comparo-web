@@ -1,0 +1,202 @@
+{
+  "$description": "Comparo design tokens. Light/dark values for semantic colors; ramps are fixed brand colors.",
+  "color": {
+    "ramp": {
+      "blue": {
+        "50": "#EDF2FF",
+        "100": "#D6E2FF",
+        "300": "#8FAAF5",
+        "500": "#3A6DF0",
+        "700": "#2449B8"
+      },
+      "orange": {
+        "50": "#FFF3E6",
+        "100": "#FFE0BF",
+        "300": "#FFC08A",
+        "400": "#FF9A3C",
+        "700": "#B4560A"
+      },
+      "navy": {
+        "100": "#E1E7F2",
+        "300": "#A9B3CC",
+        "500": "#5B6785",
+        "700": "#34407A",
+        "900": "#1B2559"
+      },
+      "cloud": {
+        "50": "#F3F6FB"
+      }
+    },
+    "semantic": {
+      "BrandBlue": {
+        "light": "#3A6DF0",
+        "dark": "#6E93FF",
+        "usage": "Primary fill; Oferta A"
+      },
+      "BrandOrange": {
+        "light": "#FF9A3C",
+        "dark": "#FFB066",
+        "usage": "Accent fill; Oferta B"
+      },
+      "BrandNavy": {
+        "light": "#1B2559",
+        "dark": "#2C3A86",
+        "usage": "Decision panels, icon overlap"
+      },
+      "BlueText": {
+        "light": "#2449B8",
+        "dark": "#8FAAF5",
+        "usage": "Blue text, links, primary button fill"
+      },
+      "OrangeText": {
+        "light": "#B4560A",
+        "dark": "#FFC08A",
+        "usage": "Orange text on light surfaces"
+      },
+      "Background": {
+        "light": "#F3F6FB",
+        "dark": "#0E1430",
+        "usage": "Screen background"
+      },
+      "Surface": {
+        "light": "#FFFFFF",
+        "dark": "#182046",
+        "usage": "Cards, table containers"
+      },
+      "SurfaceRaised": {
+        "light": "#FFFFFF",
+        "dark": "#222C5A",
+        "usage": "Sheets, popovers"
+      },
+      "Separator": {
+        "light": "#E1E7F2",
+        "dark": "#2C3A86",
+        "usage": "Dividers, borders, segmented track"
+      },
+      "TextPrimary": {
+        "light": "#1B2559",
+        "dark": "#F3F6FB",
+        "usage": "Primary text"
+      },
+      "TextSecondary": {
+        "light": "#5B6785",
+        "dark": "#A9B3CC",
+        "usage": "Secondary text, captions"
+      },
+      "Better": {
+        "light": "#12A26B",
+        "dark": "#3DD598",
+        "usage": "Mejor oferta badge and fills"
+      },
+      "BetterText": {
+        "light": "#0B7A50",
+        "dark": "#3DD598",
+        "usage": "Winning values in tables"
+      },
+      "Warning": {
+        "light": "#F2B227",
+        "dark": "#F2B227",
+        "usage": "Atención fills"
+      },
+      "WarningText": {
+        "light": "#8A6100",
+        "dark": "#F2C14E",
+        "usage": "Atención text"
+      },
+      "Worse": {
+        "light": "#E5484D",
+        "dark": "#FF6B6F",
+        "usage": "Menos favorable fills"
+      },
+      "WorseText": {
+        "light": "#B42328",
+        "dark": "#FF8A8D",
+        "usage": "Menos favorable text"
+      }
+    },
+    "icon": {
+      "light": {
+        "bg": "#F3F6FB",
+        "a": "#3A6DF0",
+        "b": "#FF9A3C",
+        "o": "#1B2559",
+        "c": "#FFFFFF"
+      },
+      "dark": {
+        "bg": "#10142A",
+        "a": "#6E93FF",
+        "b": "#FFB066",
+        "o": "#2C3A86",
+        "c": "#FFFFFF"
+      },
+      "tinted": {
+        "bg": "#000000",
+        "a": "#6B6B6B",
+        "b": "#A8A8A8",
+        "o": "#3A3A3A",
+        "c": "#FFFFFF"
+      }
+    }
+  },
+  "typography": {
+    "families": {
+      "brand": "Nunito",
+      "ui": "SF Pro (system)"
+    },
+    "scale": {
+      "display": {
+        "family": "Nunito",
+        "weight": 900,
+        "size": 34,
+        "lineHeight": 41,
+        "relativeTo": "largeTitle"
+      },
+      "title": {
+        "family": "Nunito",
+        "weight": 800,
+        "size": 28,
+        "lineHeight": 34,
+        "relativeTo": "title"
+      },
+      "headline": {
+        "family": "SF Pro",
+        "weight": 600,
+        "size": 17,
+        "lineHeight": 22,
+        "relativeTo": "headline"
+      },
+      "body": {
+        "family": "SF Pro",
+        "weight": 400,
+        "size": 17,
+        "lineHeight": 22,
+        "relativeTo": "body"
+      },
+      "caption": {
+        "family": "SF Pro",
+        "weight": 400,
+        "size": 13,
+        "lineHeight": 18,
+        "relativeTo": "caption"
+      }
+    }
+  },
+  "radius": {
+    "chip": 10,
+    "control": 12,
+    "button": 16,
+    "card": 18,
+    "panel": 22,
+    "appIconMaskRatio": 0.2237
+  },
+  "spacing": {
+    "screenMargin": 16,
+    "stackTight": 8,
+    "stack": 14,
+    "section": 24
+  },
+  "size": {
+    "minTouchTarget": 44,
+    "primaryButtonHeight": 54
+  }
+}
