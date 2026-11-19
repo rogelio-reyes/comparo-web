@@ -23,7 +23,7 @@ Responsable: Rogelio (program manager). No es desarrollador web ni de iOS: expli
 - Comparaciones guardadas, exportación a CSV y «Borrar todos mis datos».
 - Funciona **sin conexión**, sin cuentas, sin analítica y sin rastreo. Todo se guarda **solo en el iPhone**.
 - Solo **iPhone**, iOS 17 o superior, en **español**.
-- Es una app **de pago**, con precio bajo, sin plan gratuito, sin compras dentro de la app y sin anuncios. **El precio aún no es definitivo**: por ahora el sitio indica «Precio previsto: 2.99 USD» (decisión de Rogelio, 2026-11-18). Siempre con la palabra «previsto» y nunca en la política de privacidad.
+- Es una app **de pago**, con precio bajo, sin plan gratuito, sin compras dentro de la app y sin anuncios. **El precio aún no es definitivo**: por ahora el sitio indica «Precio previsto: 4.99 USD» (decisión de Rogelio, 2026-11-18). Siempre con la palabra «previsto» y nunca en la política de privacidad.
 - Las cifras son **estimaciones** (una retención estimada, no la declaración anual de impuestos). No es asesoría fiscal, legal ni financiera. Para empleos sin retenciones locales (contratista o empleador en el exterior) la app no calcula impuestos y recomienda consultar a un contador.
 
 **Lo que NO se debe afirmar (aún):**
