@@ -49,7 +49,7 @@ Ideas por decidir con Rogelio (no las construyas sin su plan aprobado): página 
 
 - La política vive en dos lugares que **deben coincidir palabra por palabra**: la pantalla dentro de la app y la web. En la app, una prueba automática vigila que no se separen. Si cambias el texto aquí, avisa a Rogelio para que se cambie también en la app.
 - El texto vigente está en `referencia/politica-de-privacidad-actual.html`. Puedes rediseñarlo con la marca, pero **no cambies las palabras**. Sus secciones: resumen, qué información guarda la app, dónde se guarda, qué no hacemos, exportar a CSV, copias de seguridad, cómo borrar los datos, cambios a la política y contacto.
-- **Fecha de vigencia:** «20 de noviembre de 2027», definitiva según Rogelio (2026-11-20). Debe ser idéntica en la app; si cambia, avisar para actualizar ambos lados.
+- **Fecha de vigencia:** «20 de noviembre de 2026», definitiva según Rogelio (2026-11-20). Debe ser idéntica en la app; si cambia, avisar para actualizar ambos lados.
 - La **URL pública** de la política (por ejemplo `https://comparoapp.com/privacidad`) se pondrá luego en la app y en App Store Connect. Decide con Rogelio una ruta estable y no la cambies después.
 - La política de la web no debe contradecir lo que hace el sitio (ver «Privacidad del sitio»).
 
