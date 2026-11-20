@@ -623,24 +623,23 @@ a:hover {
   color: var(--texto-2);
 }
 
-/* ---------- Carrusel horizontal de capturas ---------- */
+/* ---------- Carrusel de capturas ----------
+   Por defecto (y con «reducir movimiento» activado) es una tira que se desplaza
+   con el dedo o el teclado. Si el usuario no pidió reducir el movimiento, la tira
+   avanza sola y despacio; se detiene al pasar el cursor, al enfocarla o con la
+   casilla «Pausar movimiento» (WCAG 2.2.2). Sin JavaScript. */
 .carrusel-marco {
-  position: relative;
+  margin-block-start: var(--seccion);
 }
 
 .carrusel {
-  display: flex;
-  gap: var(--espacio);
-  margin: 0;
-  padding: 8px var(--margen) 20px;
-  list-style: none;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: var(--margen);
   scrollbar-width: thin;
   scrollbar-color: var(--texto-2) transparent;
-  /* La región se enfoca con el teclado para poder desplazarla con las flechas */
+  padding: 8px var(--margen) 20px;
 }
 
 /* Alinea la primera captura con el resto del contenido */
@@ -651,9 +650,27 @@ a:hover {
   }
 }
 
-.carrusel > li {
+.cinta {
+  display: flex;
+  inline-size: max-content;
+}
+
+.carrusel-lista {
+  display: flex;
+  gap: var(--espacio);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carrusel-lista > li {
   flex: 0 0 min(72vw, 17rem);
   scroll-snap-align: start;
+}
+
+/* La segunda copia solo existe para el movimiento continuo */
+.carrusel-copia {
+  display: none;
 }
 
 .carrusel figure {
@@ -676,11 +693,61 @@ a:hover {
   color: var(--texto-2);
 }
 
-.carrusel-aviso {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--espacio);
-  flex-wrap: wrap;
+.pausa {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .carrusel {
+    overflow: hidden;
+    scroll-snap-type: none;
+    padding-inline: 0;
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+
+  .carrusel-copia {
+    display: flex;
+  }
+
+  /* Cada lista deja un hueco al final igual al espacio entre capturas:
+     así, al llegar a -50 %, el bucle es invisible. */
+  .carrusel-lista {
+    padding-inline-end: var(--espacio);
+  }
+
+  .cinta {
+    animation: avanzar 50s linear infinite;
+  }
+
+  .carrusel:hover .cinta,
+  .carrusel:focus-within .cinta,
+  .carrusel-marco:has(.pausa input:checked) .cinta {
+    animation-play-state: paused;
+  }
+
+  .pausa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-block-size: 44px;
+    margin-inline: max(var(--margen), calc((100vw - var(--ancho-max)) / 2));
+    cursor: pointer;
+    font-family: var(--fuente-marca);
+    font-weight: 800;
+  }
+
+  .pausa input {
+    inline-size: 24px;
+    block-size: 24px;
+    margin: 0;
+    accent-color: var(--azul-texto);
+  }
+
+  @keyframes avanzar {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* ---------- Funciones ---------- */
@@ -955,9 +1022,6 @@ a:hover {
     scroll-behavior: smooth;
   }
 
-  .carrusel {
-    scroll-behavior: smooth;
-  }
 }
 
 @media (forced-colors: active) {
@@ -978,10 +1042,6 @@ a:hover {
 /* ---------- Ajustes de la página de inicio ---------- */
 .ejemplo {
   margin: 0;
-}
-
-.carrusel-marco {
-  margin-block-start: var(--seccion);
 }
 
 .nota-capturas {
