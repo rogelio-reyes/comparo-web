@@ -725,22 +725,61 @@ a:hover {
     animation-play-state: paused;
   }
 
+  /* Botón «Pausar movimiento»: es una casilla nativa (accesible con teclado
+     y lector de pantalla) dibujada como una píldora con ícono. */
   .pausa {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     min-block-size: 44px;
+    padding-inline: 18px;
     margin-inline: max(var(--margen), calc((100vw - var(--ancho-max)) / 2));
+    margin-block-end: 8px;
+    background: var(--superficie);
+    color: var(--texto);
+    border: 1px solid var(--separador);
+    border-radius: 999px;
     cursor: pointer;
     font-family: var(--fuente-marca);
     font-weight: 800;
+    font-size: 0.9375rem;
+  }
+
+  .pausa:hover {
+    border-color: var(--azul-texto);
   }
 
   .pausa input {
-    inline-size: 24px;
-    block-size: 24px;
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
     margin: 0;
-    accent-color: var(--azul-texto);
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .pausa:has(input:focus-visible) {
+    outline: 3px solid var(--azul-texto);
+    outline-offset: 3px;
+  }
+
+  /* Ícono: dos barras (pausar) y, ya pausado, un triángulo (reanudar) */
+  .pausa::before {
+    content: "";
+    flex: none;
+    inline-size: 12px;
+    block-size: 14px;
+    border-inline: 4px solid var(--azul-texto);
+  }
+
+  .pausa:has(input:checked)::before {
+    inline-size: 0;
+    block-size: 0;
+    border-inline: 0;
+    border-block: 7px solid transparent;
+    border-inline-start: 12px solid var(--azul-texto);
   }
 
   @keyframes avanzar {
